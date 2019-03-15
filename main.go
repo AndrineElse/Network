@@ -54,7 +54,7 @@ func main() {
 	// ... and start the transmitter/receiver pair on some port
 	// These functions can take any number of channels! It is also possible to
 	//  start multiple transmitters/receivers on the same port.
-  go bcast.Transmitter(10252, helloTx)
+  go bcast.Transmitter(10253, helloTx)
 	go bcast.Receiver(10252, helloRx)
 
 	// The example message. We just send one of these every second.
