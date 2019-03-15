@@ -16,6 +16,7 @@ import (
 //  will be received as zero-values.
 type HelloMsg struct {
 	Message string
+	test string
 	Iter    int
 
 }
@@ -59,7 +60,7 @@ func main() {
 
 	// The example message. We just send one of these every second.
 	go func() {
-		helloMsg := HelloMsg{"Hi, det virke " + id, 0}
+		helloMsg := HelloMsg{"Hi, det virke " + id,"testtest", 0}
 		for {
 			helloMsg.Iter++
 			helloTx <- helloMsg
